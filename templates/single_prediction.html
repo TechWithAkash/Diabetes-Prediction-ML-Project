@@ -1,0 +1,101 @@
+<!-- <h1>Person is: {{result}}</h1> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+
+  <style>
+    /* Add CSS styles for the navbar */
+    .navbar {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
+
+    /* Style the links in the navbar */
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    /* Add CSS styles for the form */
+    .login {
+      max-width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #f4f7f8;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px 0px #ccc;
+    }
+
+    .login h1 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .login input {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .login button {
+      width: 100%;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Add CSS styles for the result heading */
+    .result-heading {
+      text-align: center;
+      font-size: 24px;
+      margin-top: 20px;
+    }
+     /* Add CSS styles for the footer */
+     .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <div class="login">
+    <h1>Diabetes Prediction</h1>
+    <form action="{{ url_for('predict_datapoint')}}" method="post">
+      <!-- Your form inputs here -->
+      <button type="submit">Predict</button>
+    </form>
+  </div>
+
+  <div class="result-heading">
+    <h1>Person is: {{result}}</h1>
+  </div>
+
+  <div class="footer">
+    &copy; 2023 Your Company Name
+  </div>
+</body>
+</html>
